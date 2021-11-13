@@ -32,7 +32,7 @@
 
   cd server
 
-  npm install (or) npm ci
+  npm ci
 
   node server.js
 
@@ -41,7 +41,7 @@
 
   cd client/EBS
 
-  npm install (or) npm ci
+  npm ci
 
   ng serve -o
 
