@@ -4,44 +4,44 @@
 
 ## Features Status:
 
-MongoDB: Hosted on cloud
+  MongoDB: Hosted on cloud
 
-Product Images are stored in AWS S3
+  Product Images are stored in AWS S3
 
-Algolia search API included for product search
+  Algolia search API included for product search
 
-Stripe payment API need to be implemented
+  Stripe payment API need to be implemented
 
-Chatbot need to be added
+  Chatbot need to be added
 
 
 -------------------------------
 
 ## Unique features:
 
-User should be able to select multiple addresses for one order.
+  User should be able to select multiple addresses for one order.
 
-User should be able to place the order with multiple payments for one order.
+  User should be able to place the order with multiple payments for one order.
 
-Donation products do not need any payment.
+  Donation products do not need any payment.
 
 
 ## How to Run:
 
 ### Server: 
 
-cd server
+  cd server
 
-npm install (or) npm ci
+  npm install (or) npm ci
 
-node server.js
+  node server.js
 
 
 ### Client: 
 
-cd client/EBS
+  cd client/EBS
 
-npm install (or) npm ci
+  npm install (or) npm ci
 
-ng serve -o
+  ng serve -o
 
