@@ -1,14 +1,14 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-main">
   <div class="container-fluid">
     <a routerLink="/" class="navbar-brand">
-      <img src="./assets/img/logo.png" alt="logo" id="logo"> EBS
+      <img src="./assets/img/logo.png" alt="logo" id="logo"> <span id="title_name">EBS</span>
     </a>
     <button class="navbar-toggler" (click)="isCollapsed = !isCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div [ngbCollapse]="isCollapsed" style="margin-left: 50px;" class="collapse navbar-collapse flex-column"
+    <div [ngbCollapse]="isCollapsed" style="margin-left: 20px;" class="collapse navbar-collapse flex-column"
       id="navbarNav">
-      <div class="input-group w-50">
+      <div class="input-group w-100">
         <input type="text" name="search" class="form-control" [(ngModel)]="searchTerm" (keyup.enter)="search()">
         <span id="searchBtn" class="bg-warning" (click)="search()">
           <i class="fa fa-search"></i>
