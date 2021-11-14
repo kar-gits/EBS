@@ -6,9 +6,9 @@
     <button class="navbar-toggler" (click)="isCollapsed = !isCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div [ngbCollapse]="isCollapsed" style="margin-left: 20px;" class="collapse navbar-collapse flex-column"
+    <div [ngbCollapse]="isCollapsed" style="margin-left: 50px;" class="collapse navbar-collapse flex-column"
       id="navbarNav">
-      <div class="input-group w-100">
+      <div class="d-flex input-group w-50">
         <input type="text" name="search" class="form-control" [(ngModel)]="searchTerm" (keyup.enter)="search()">
         <span id="searchBtn" class="bg-warning" (click)="search()">
           <i class="fa fa-search"></i>
