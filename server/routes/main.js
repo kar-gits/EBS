@@ -180,7 +180,7 @@ router.post('/payment', checkJWT, (req, res, next) => {
     })
     .then(function(customer) {
       return stripe.charges.create({
-        amount: currentCharges,
+        amount: currentCharges * 100,
         currency: 'usd',
         customer: customer.id
       });
