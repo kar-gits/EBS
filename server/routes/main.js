@@ -172,7 +172,7 @@ router.route('/categories')
 //Function to facilitate payment functionality  using STRIPE API 
 router.post('/payment', checkJWT, (req, res, next) => {
   const stripeToken = req.body.stripeToken;
-  const currentCharges = req.body.totalPrice;
+  const currentCharges = Math.round(req.body.totalPrice * 100);
 
   stripe.customers
     .create({
@@ -180,7 +180,7 @@ router.post('/payment', checkJWT, (req, res, next) => {
     })
     .then(function(customer) {
       return stripe.charges.create({
-        amount: currentCharges * 100,
+        amount: currentCharges,
         currency: 'usd',
         customer: customer.id
       });
@@ -190,7 +190,7 @@ router.post('/payment', checkJWT, (req, res, next) => {
 
       let order = new Order();
       order.owner = req.decoded.user._id;
-      order.totalPrice = currentCharges;
+      order.totalPrice = currentCharges / 100;
       
       products.map(product => {
         order.products.push({
